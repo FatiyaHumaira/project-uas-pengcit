@@ -31,7 +31,7 @@ if uploaded_file is not None:
     # Tampilkan gambar asli
     st.subheader("Gambar Asli")
     original_image = load_image("input.png")
-    st.image(original_image, caption="Gambar Asli", use_container_width=True)
+    st.image(original_image, caption="Gambar Asli", use_column_width=True)
     
     # Jalankan model AGLLNet
     st.subheader("Proses Peningkatan Cahaya")
@@ -50,7 +50,7 @@ if uploaded_file is not None:
         
     # Tampilkan gambar hasil
     st.subheader("Gambar Setelah Ditingkatkan")
-    st.image(output_image, caption="Gambar Ditingkatkan", use_container_width=True)
+    st.image(output_image, caption="Gambar Ditingkatkan", use_column_width=True)
 
     # Unduh hasil gambar
     with open(output_path, "rb") as file:
